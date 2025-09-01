@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .profile-img {
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .hobby-card {
+            transition: all 0.3s ease;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="text-white">
+    <!-- Header -->
+    <header class="glass-effect py-4 px-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Portfolio</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-blue-200 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-200 transition-colors">About</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="container mx-auto text-center">
+            <div class="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white mb-6 profile-img animate-float">
+                        <img src="hendry.jpg" alt="Foto Profil Saya" class="w-full h-full object-cover">
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">HENDRY MULYANA</h2>
+                    <p class="text-xl mb-2">Kelas: X RPL 2</p>
+                    <p class="text-xl mb-6">SMK NEGERI 17 JAKARTA</p>
+                    <p class="text-lg opacity-90">Selamat datang di portfolio pribadi saya!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Tentang Saya</h2>
+            
+            <!-- Hobbies -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="glass-effect rounded-xl p-6 text-center hobby-card">
+                    <i class="fas fa-book-reader text-4xl mb-4 text-blue-200"></i>
+                    <h3 class="text-xl font-semibold mb-2">Membaca</h3>
+                    <p>Saya menikmati membaca buku fiksi dan non-fiksi untuk memperluas wawasan.</p>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6 text-center hobby-card">
+                    <i class="fas fa-music text-4xl mb-4 text-purple-200"></i>
+                    <h3 class="text-xl font-semibold mb-2">Musik</h3>
+                    <p>saya sangat suka mendengarkan musik, entah ketika mengerjakan tugas atau bermain game.</p>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6 text-center hobby-card">
+                    <i class="fas fa-basketball-ball text-4xl mb-4 text-green-200"></i>
+                    <h3 class="text-xl font-semibold mb-2">mencoba hal baru</h3>
+                    <p>saya sangat suka mecoba hal baru, dan rasa ingin tahu saya sangat tinggi.</p>
+                </div>
+            </div>
+
+            <!-- School Info -->
+            <div class="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Informasi Sekolah</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <i class="fas fa-school text-5xl mb-4 text-yellow-200"></i>
+                        <h4 class="text-xl font-medium mb-2">SMK NEGERI 17 JAKARTA</h4>
+                        <p>sekolah smk negeri 17 jakarta berakreditasi A, dan menjadi sekolah pusat keunggulan.</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-graduation-cap text-5xl mb-4 text-red-200"></i>
+                        <h4 class="text-xl font-medium mb-2">kelas X RPL 2</h4>
+                        <p>Jurusan rekayasa perangkat lunak atau biasa disebut rpl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Hubungi Saya</h2>
+            
+            <div class="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- WhatsApp -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 social-icon">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+                        <p class="mb-4">+62 857-2258-9979</p>
+                        <a href="https://wa.me/6281234567890" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
+                            Chat Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Instagram -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 social-icon">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Instagram</h3>
+                        <p class="mb-4">@_hennn.6
+                        </p>
+                        <a href="https://instagram.com/nama_pengguna" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full transition-colors">
+                            Follow Saya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-6 px-4 text-center">
+        <div class="container mx-auto">
+            <p>© 2025 Portfolio Pribadi. Dibuat dengan ❤.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animasi saat scrolling
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Terapkan animasi pada elemen
+        document.querySelectorAll('.hobby-card, .glass-effect').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
